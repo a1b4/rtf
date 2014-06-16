@@ -155,12 +155,12 @@ module RTF
       # Attribute accessor.
       attr_reader :justification, :left_indent, :right_indent,
                   :first_line_indent, :space_before, :space_after,
-                  :line_spacing, :flow
+                  :line_spacing, :type_spacing, :flow
 
       # Attribute mutator.
       attr_writer :justification, :left_indent, :right_indent,
                   :first_line_indent, :space_before, :space_after,
-                  :line_spacing, :flow
+                  :line_spacing, :type_spacing, :flow
 
       # This is a constructor for the ParagraphStyle class.
       #
