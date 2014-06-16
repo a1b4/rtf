@@ -175,6 +175,7 @@ module RTF
          @space_before      = base.nil? ? nil : base.space_before
          @space_after       = base.nil? ? nil : base.space_after
          @line_spacing      = base.nil? ? nil : base.line_spacing
+         @type_spacing      = base.nil? ? nil : base.type_spacing
          @flow              = base.nil? ? LEFT_TO_RIGHT : base.flow
       end
 
@@ -202,6 +203,7 @@ module RTF
          text << "\\sb#{@space_before}"       unless @space_before.nil?
          text << "\\sa#{@space_after}"        unless @space_after.nil?
          text << "\\sl#{@line_spacing}"       unless @line_spacing.nil?
+         text << "\\sl#{@type_spacing}"       unless @type_spacing.nil?
          text << '\rtlpar' if @flow == RIGHT_TO_LEFT
 
          text.string.length > 0 ? text.string : nil
